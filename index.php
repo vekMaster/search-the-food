@@ -27,7 +27,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Servicio de comida</title>
+	<title>Search de comida</title>
 	<link rel="Stylesheet" type="text/css" href="css/Estilos.css">
 </head>
 	<body>
