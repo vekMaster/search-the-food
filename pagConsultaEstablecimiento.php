@@ -34,7 +34,7 @@
  
 		<section class="main">
 			<div class="establecm">
-				<h1>Buscar Establecimiento</h1>
+				<h1>Buscar Establecimiento </h1>
 				<br>
 				<form>
 					<input id="pac-input" class="controls" type="text" placeholder="Search Box">
