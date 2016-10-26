@@ -8,7 +8,7 @@
 		exit();
 	}else{
 		//verifico si entró siendo un administrador
-		$consulta = "SELECT * FROM Establecimiento where correo ='".$_SESSION['correo']."';";
+		$consulta = "SELECT * FROM cliente where correo ='".$_SESSION['correo']."';";
 		$resultado = mysql_query($consulta) or die ('problemas en la consulta '.mysql_error());
 		$verificacion = mysql_fetch_array($resultado);
 				
