@@ -32,10 +32,10 @@ function eliminarEstablecimiento(){
 function cargarEstablecimiento(){
 	$.ajax({
 		type: 'post',
-		url: 'cargarCliente.php',
+		url: 'cargarEstablecimiento.php',
 	})
 	.done(function(data){
-		$("#selectCliente").html(data);
+		$("#selectEstablecimiento").html(data);
 		
 
 	})
