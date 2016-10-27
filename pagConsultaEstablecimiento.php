@@ -152,7 +152,7 @@
 	    				<div class="google-maps" id="map">
 	    				<iframe  width="400" height="200" frameborder="2" style="border:0"></iframe>
 	    				</div>
-					<br><br>
+					<!-- <br><br>
 					<label for ="latitud">Latitud: </label>
 					<input id="latitud" name="latitud" type ="text" readonly="readonly" >
 					<br><br>
@@ -172,7 +172,7 @@
 					</div>
 					<div id="retroAlimentacion">
 						
-					</div>
+					</div> -->
 				</form>
 				<br><br>
 			</div>
