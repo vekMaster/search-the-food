@@ -38,89 +38,85 @@
 				<br>
 				<form>
 					<input id="pac-input" class="controls" type="text" placeholder="Search Box">
-					
-					
-<script>
-// This example adds a search box to a map, using the Google Place Autocomplete
-					// feature. People can enter geographical searches. The search box will return a
-					// pick list containing a mix of places and predicted search terms.
-function initAutocomplete() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 4.4915063, lng: -75.7849953},
-    zoom: 13,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  });
+					<script>
+					// This example adds a search box to a map, using the Google Place Autocomplete
+										// feature. People can enter geographical searches. The search box will return a
+										// pick list containing a mix of places and predicted search terms.
+					function initAutocomplete() {
+					  var map = new google.maps.Map(document.getElementById('map'), {
+						center: {lat: 4.4915063, lng: -75.7849953},
+						zoom: 13,
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					  });
 
-  // Create the search box and link it to the UI element.
-  var input = document.getElementById('pac-input');
-  var searchBox = new google.maps.places.SearchBox(input);
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+					  // Create the search box and link it to the UI element.
+					  var input = document.getElementById('pac-input');
+					  var searchBox = new google.maps.places.SearchBox(input);
+					  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-  // Bias the SearchBox results towards current map's viewport.
-  map.addListener('bounds_changed', function() {
-    searchBox.setBounds(map.getBounds());
-  });
+					  // Bias the SearchBox results towards current map's viewport.
+					  map.addListener('bounds_changed', function() {
+						searchBox.setBounds(map.getBounds());
+					  });
 
-  var markers = [];
-  // [START region_getplaces]
-  // Listen for the event fired when the user selects a prediction and retrieve
-  // more details for that place.
-  searchBox.addListener('places_changed', function() {
-    var places = searchBox.getPlaces();
+					  var markers = [];
+					  // [START region_getplaces]
+					  // Listen for the event fired when the user selects a prediction and retrieve
+					  // more details for that place.
+					  searchBox.addListener('places_changed', function() {
+						var places = searchBox.getPlaces();
 
-    if (places.length == 0) {
-      return;
-    }
+						if (places.length == 0) {
+						  return;
+						}
 
-    // Clear out the old markers.
-    markers.forEach(function(marker) {
-      marker.setMap(null);
-    });
-    markers = [];
+						// Clear out the old markers.
+						markers.forEach(function(marker) {
+						  marker.setMap(null);
+						});
+						markers = [];
 
-    // For each place, get the icon, name and location.
-    var bounds = new google.maps.LatLngBounds();
-    places.forEach(function(place) {
-      var icon = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25)
-      };
-					      
-      // Create a marker for each place.
-      markers.push(new google.maps.Marker({
-        map: map,
-        icon: icon,
-        title: place.name,
-        position: place.geometry.location
-      }));
-					      
+						// For each place, get the icon, name and location.
+						var bounds = new google.maps.LatLngBounds();
+						places.forEach(function(place) {
+						  var icon = {
+							url: place.icon,
+							size: new google.maps.Size(71, 71),
+							origin: new google.maps.Point(0, 0),
+							anchor: new google.maps.Point(17, 34),
+							scaledSize: new google.maps.Size(25, 25)
+						  };
+											  
+						  // Create a marker for each place.
+						  markers.push(new google.maps.Marker({
+							map: map,
+							icon: icon,
+							title: place.name,
+							position: place.geometry.location
+						  }));
+											  
 
-      if (place.geometry.viewport) {
-        // Only geocodes have viewport.
-        bounds.union(place.geometry.viewport);
-      } else {
-        bounds.extend(place.geometry.location);
-      }
-    });
-					    
-	//var ne = bounds.getNorthEast();
-	var sw = bounds.getSouthWest();
-  	$("#latitud").val(sw.lat());
-	$("#longitud").val(sw.lng());
-  	map.fitBounds(bounds);
-	 });
-					  // [END region_getplaces]
-	}
-					
-</script>					
-					
-					
-	    				<div class="google-maps" id="map">
-	    				<iframe  width="400" height="200" frameborder="2" style="border:0"></iframe>
-	    				</div>
+						  if (place.geometry.viewport) {
+							// Only geocodes have viewport.
+							bounds.union(place.geometry.viewport);
+						  } else {
+							bounds.extend(place.geometry.location);
+						  }
+						});
+											
+						//var ne = bounds.getNorthEast();
+						var sw = bounds.getSouthWest();
+						$("#latitud").val(sw.lat());
+						$("#longitud").val(sw.lng());
+						map.fitBounds(bounds);
+						 });
+										  // [END region_getplaces]
+						}
+										
+					</script>					
+	    			<div class="google-maps" id="map">
+	    			<iframe  width="400" height="200" frameborder="2" style="border:0"></iframe>
+	    			</div>
 					<br><br>
 					<label for ="latitud">Latitud: </label>
 					<input id="latitud" name="latitud" type ="text" readonly="readonly" >
@@ -132,6 +128,16 @@ function initAutocomplete() {
 					<input id ="buscarEstablecimiento" type ="text" placeholder="buscar nombre establecimiento";>
 					<br><br>
 					<input class="myButton" type="submit" value=" Consultar ">
+					<div class="ec-stars-wrapper" id="infoEstablecimiento">
+						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+						<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+						<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+					</div>
+					<div id="retroAlimentacion">
+						
+					</div>
 				</form>
 				<br><br>
 			</div>

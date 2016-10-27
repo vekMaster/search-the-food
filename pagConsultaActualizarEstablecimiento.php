@@ -54,8 +54,8 @@
 				<h1>Actualizar Establecimiento</h1>
 				<br>
 				<form id ="actualizarEstablecimiento" method="post">
-                    			<label for ="buscarEstablecimiento">Buscar: </label>
-                   	 		<select id="establecimiento" name="nombre" type="multiple" >
+                    <label for ="buscarEstablecimiento">Buscar: </label>
+                   	<select id="establecimiento" name="nombre" type="multiple" >
 					
 					</select>
 					<div id="campos">
