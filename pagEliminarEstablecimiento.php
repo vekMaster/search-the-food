@@ -57,6 +57,14 @@
                    			<select id="selectEstablecimiento" name="nombre" type="multiple" placeholder="seleccione">
 					<select  selected="selected" >
 					</select>
+					<br><br>
+					<label for ="passwordAdm">Clave : </label>
+					<input id="passwordAdm"type ="password" placeholder="Ingrese la clave ">					
+					<br><br>
+					<div id = "divEliminarEstablecimiento">
+					
+					
+					</div>
 			
 					<br><br>
 					<input class="myButton" type="submit" value=" Eliminar">

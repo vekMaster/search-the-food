@@ -7,21 +7,21 @@ function cargar(){
 	$("#eliminarEstablecimiento").on('submit',eliminarEstablecimiento);
 }
 function eliminarEstablecimiento(){
-	var confirmacion=confirm('Esta seguro de eliminar al cliente?');
+	var confirmacion=confirm('Esta seguro de eliminar el establecimiento?');
 	if(confirmacion){
 		var entrada = {
-			'correo': $('#selectCliente').val(),
-			'clave' : $('#passwordA').val()
+			'id': $('#selectEstablecimiento').val(),
+			'clave' : $('#passwordAdmin').val()
 		}
 	
 		$.ajax({
 			type: 'post',
-			url: 'eliminarCliente.php',
+			url: 'eliminarEstablecimiento.php',
 			data: entrada
 		})
 		.done(function(data){
-			$("#divEliminar").css('color','#FE0303');
-			$('#divEliminar').html(data);
+			$("#divEliminarEstablecimiento").css('color','#FE0303');
+			$('#divEliminarEstablecimiento').html(data);
 
 		})
 	}
