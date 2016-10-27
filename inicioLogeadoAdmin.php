@@ -42,6 +42,7 @@
 					<a href="pagRegistroEstablecimiento.php">Registrar Establecimiento</a>
 					<a href="pagConsultaActualizarEstablecimiento.php">Actualizar Establecimiento</a>
 					<a href="pagEliminarCliente.php">Eliminar Cliente</a>
+					<a href="pagEliminarEstablecimiento.php">Eliminar Establecimiento</a>
 					<a href="logout.php">Cerrar Sesion</a>
 				</nav>
 			</header>
