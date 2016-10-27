@@ -20,9 +20,9 @@ function eliminarEstablecimiento(){
 			data: entrada
 		})
 		.done(function(data){
-			$("#divEliminarEstablecimiento").css('color','#FE0303');
-			$('#divEliminarEstablecimiento').html(data);
-			$('#passwordAdm').val("");	
+			$('#passwordAdm').val("");
+			alert(data);
+			location.reload();
 		})
 	}
 	event.preventDefault();

@@ -20,9 +20,9 @@ function eliminarCliente(){
 			data: entrada
 		})
 		.done(function(data){
-			$("#divEliminar").css('color','#FE0303');
-			$('#divEliminar').html(data);
 			$('#passwordA').val("");
+			alert(data);
+			location.reload();
 
 		})
 	}
