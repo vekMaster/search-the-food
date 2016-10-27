@@ -11,7 +11,7 @@ function eliminarEstablecimiento(){
 	if(confirmacion){
 		var entrada = {
 			'id': $('#selectEstablecimiento').val(),
-			'clave' : $('#passwordAdmin').val()
+			'clave' : $('#passwordAdm').val()
 		}
 	
 		$.ajax({
@@ -22,7 +22,7 @@ function eliminarEstablecimiento(){
 		.done(function(data){
 			$("#divEliminarEstablecimiento").css('color','#FE0303');
 			$('#divEliminarEstablecimiento').html(data);
-
+			$('#passwordAdm').val("");	
 		})
 	}
 	event.preventDefault();
