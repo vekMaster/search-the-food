@@ -10,8 +10,8 @@ function eliminarEstablecimiento(){
 	var confirmacion=confirm('Esta seguro de eliminar el establecimiento?');
 	if(confirmacion){
 		var entrada = {
-			'correo': $('#selectCliente').val(),
-			'clave' : $('#passwordA').val()
+			'id': $('#selectEstablecimiento').val(),
+			'clave' : $('#passwordAdmin').val()
 		}
 	
 		$.ajax({
