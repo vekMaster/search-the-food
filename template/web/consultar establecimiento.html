@@ -145,27 +145,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h5></h5>
 						
 				</div>
-				
-				<script type="text/javascript">
-					$(document).on("click", ".start", function () {
-
-					var id = $(this).attr("id");
-
-					//limpiamos
-						for(var i=1; i<=5; i++){
-						$('#'+i).addClass("glyphicon-star-empty");
-						$('#'+i).removeClass("glyphicon-star");
-				}
-
-						for(var j=1; j<=parseInt(id); j++){
-						$('#'+j).removeClass("glyphicon-star-empty");
-						$('#'+j).addClass("glyphicon-star");
-				}
-	        
-				});
-
-				</script>
-					
+				<div>
+				<button type="button" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+				</button>
+				</div>
 												
 				<button type="button" class="btn btn-danger">Registrar Establecimiento</button>
 			</form>
